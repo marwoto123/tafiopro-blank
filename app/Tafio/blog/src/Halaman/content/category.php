@@ -8,10 +8,10 @@ use Tafio\core\src\Library\Halaman\crud;
 
 class category extends Resource
 {
-  public function config()
+    public function config()
     {
-        $this->halaman = (new crud)->make()->route('index','edit','create');
-        
+        $this->halaman = (new crud)->make()->route('index', 'edit', 'create');
+
         $this->fields = [
             (new text)->make('nama')->validate("required"),
         ];

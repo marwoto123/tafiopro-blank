@@ -3,6 +3,7 @@
 namespace App\Tafio\blog\src\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Tafio\core\src\Halaman\core\company;
 
 class category extends Model
 {

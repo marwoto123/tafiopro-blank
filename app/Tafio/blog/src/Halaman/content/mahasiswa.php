@@ -8,14 +8,16 @@ use Tafio\core\src\Library\Halaman\crud;
 
 class mahasiswa extends Resource
 {
-  public function config()
+    public function config()
     {
-        $this->halaman = (new crud)->make()->route('index','edit','create');
-        
+        $this->halaman = (new crud)->make()->route('index', 'edit', 'create', 'destroy')->haveShow();
+
         $this->fields = [
-            (new text)->make('nama')->search()->validate("required"),
+            (new text)->make('nama')->search()->validate("required")->linkShow()->displayFront(),
             (new text)->make('nim')->validate("required"),
             (new text)->make('jurusan')->validate("required"),
+            (new text)->make('nama')->validate("required"),
+
         ];
     }
 }
