@@ -1,0 +1,14 @@
+1. rename .env.example jadi .env, trus setting dbnya
+2. jalankan: composer install --no-scripts
+3. masuk ke: vendor/tafio/core
+   pindah ke branch master: git checkout master
+   trus pull
+4. jalankan: php artisan migrate
+5. jalankan php artisan vendor:publish --tag=public
+6. folder storage set ke 777:
+   chmod -R 777 storage
+7. apache arahkan domain nama_web.com ke folder blank ini (nama_web.com bebas mau diisi apa)
+7. akses halaman: nama_web.com/update
+8. cobain akses
+   username: superadmin@tafio.com
+   pass: superadmin
