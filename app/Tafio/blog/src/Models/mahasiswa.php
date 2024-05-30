@@ -11,6 +11,13 @@ class mahasiswa extends Model
 {
     protected $table = 'mahasiswas';
     protected $guarded = [];
+    protected static function booted(): void
+    {
+        static::addGlobalScope('company', function (Builder $builder) {
+            $builder->where($builder->qualifyColumn('company_id'), session('company'));
+        });
+    }
+
     // protected $fillable = ['nama', 'jurusan_id', 'company_id'];
 
 
