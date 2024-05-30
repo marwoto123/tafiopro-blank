@@ -15,7 +15,7 @@ class jurusan extends Resource
 
         $this->fields = [
             (new text)->make("jurusan")->validate("required"),
-            (new noForm)->make("id")->judul('tabel_Jurusan_id'),
+            // (new noForm)->make("id")->judul('tabel_Jurusan_id'),
          
 
         ];

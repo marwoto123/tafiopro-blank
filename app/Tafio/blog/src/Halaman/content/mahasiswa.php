@@ -14,14 +14,14 @@ class mahasiswa extends Resource
 {
     public function config()
     {
-        $this->halaman = (new crud)->make()->route('index', 'edit', 'create', 'destroy');
+        $this->halaman = (new crud)->make();
 
         $this->fields = [
             (new text)->make('nama')->search()->validate("required"),
             (new text)->make('jurusan_id')->judul('jurusan_id')->validate("required"),
             // (new noForm)->make('jurusan')->judul('jurusan')->displayFront(),
          
-            (new select)->make('jurusan')->judul('jurusan')->options(jurusan::get()->pluck('jurusan')->all()),
+            (new select)->make('jurusan')->judul('jurusan')->options(jurusan::get()->pluck('jurusan','id')->all()),
             
 
         ];

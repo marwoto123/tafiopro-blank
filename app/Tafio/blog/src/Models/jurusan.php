@@ -10,7 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 class jurusan extends Model
 {
     protected $table = 'jurusans';
-    protected $fillable = ['id','jurusan','company_id'];
+    protected $guarded = [];
+    // protected $fillable = ['id','jurusan','company_id'];
 
     public function company()
     {
@@ -18,7 +19,7 @@ class jurusan extends Model
     }
     public function mahasiswa()
     {
-        return $this->hasMany(Mahasiswa::class);
+        return $this->hasMany(mahasiswa::class);
     }
   
 }

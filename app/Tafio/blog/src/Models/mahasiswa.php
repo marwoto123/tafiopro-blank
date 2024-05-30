@@ -10,7 +10,8 @@ use Kyslik\ColumnSortable\Sortable;
 class mahasiswa extends Model
 {
     protected $table = 'mahasiswas';
-    protected $fillable = ['nama', 'jurusan_id', 'company_id'];
+    protected $guarded = [];
+    // protected $fillable = ['nama', 'jurusan_id', 'company_id'];
 
 
 
@@ -22,7 +23,7 @@ class mahasiswa extends Model
     }
     public function jurusan()
     {
-        return $this->belongsTo(Jurusan::class);
+        return $this->belongsTo(jurusan::class);
     }
 }
 // belongsTo
