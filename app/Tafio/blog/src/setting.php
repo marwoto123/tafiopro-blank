@@ -24,6 +24,10 @@ class setting extends Resource_setting
                         'nama' => 'Mahasiswa',
                         'alamat' => 'blog/content/mahasiswa',
                     ],
+                    [
+                        'nama' => 'Jurusan',
+                        'alamat' => 'blog/content/jurusan',
+                    ],
                 ],
             ],
         ];

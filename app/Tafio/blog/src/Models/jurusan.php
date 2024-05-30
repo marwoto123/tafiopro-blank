@@ -9,12 +9,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class jurusan extends Model
 {
-    protected $table = 'mahasiswas';
-    protected $fillable = ['nama', 'company_id'];
+    protected $table = 'jurusans';
+    protected $fillable = ['id','jurusan','company_id'];
 
     public function company()
     {
         return $this->belongsTo(company::class);
     }
+    public function mahasiswa()
+    {
+        return $this->hasMany(Mahasiswa::class);
+    }
   
 }
+// hasMany
