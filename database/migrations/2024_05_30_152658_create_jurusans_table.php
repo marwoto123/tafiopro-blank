@@ -16,8 +16,8 @@ class CreateJurusansTable extends Migration
     {
         Schema::create($this->nama_tabel, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('company_id')->nullable();
             $table->string('jurusan');
+            $table->unsignedBigInteger('company_id')->nullable();
             $table->timestamps();
         });
         Schema::table($this->nama_tabel, function (Blueprint $table) {
