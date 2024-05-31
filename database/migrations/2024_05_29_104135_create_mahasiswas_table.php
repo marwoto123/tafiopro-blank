@@ -16,8 +16,8 @@ class CreateMahasiswasTable extends Migration
     {
         Schema::create($this->nama_tabel, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('jurusan');
             $table->string('nama');
+            $table->unsignedBigInteger('jurusan');
             $table->unsignedBigInteger('company_id')->nullable();
             $table->timestamps();
         });
