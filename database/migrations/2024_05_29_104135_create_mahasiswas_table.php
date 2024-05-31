@@ -19,7 +19,7 @@ class CreateMahasiswasTable extends Migration
             $table->unsignedBigInteger('company_id')->nullable();
             $table->string('nama');
             // $table->string('jurusan_id');
-            $table->unsignedBigInteger('jurusan_id');
+            $table->unsignedBigInteger('jurusan');
           
             $table->timestamps();
         });

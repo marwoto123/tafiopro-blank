@@ -4,11 +4,11 @@ namespace App\Tafio\blog\src\Models;
 
 use Tafio\core\src\Models\company;
 use Illuminate\Database\Eloquent\Model;
-
+use Kyslik\ColumnSortable\Sortable;
 
 
 class jurusan extends Model
-{
+{   use sortable;
     protected $table = 'jurusans';
     protected $guarded = [];
     // protected $fillable = ['id','jurusan','company_id'];

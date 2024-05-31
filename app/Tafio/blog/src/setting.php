@@ -30,6 +30,19 @@ class setting extends Resource_setting
                     ],
                 ],
             ],
+            'What To Do' => [
+                'icon' => 'google-pages',
+                'submenu' => [
+                    [
+                        'nama' => 'Catatan',
+                        'alamat' => 'blog/content/catatan',
+                    ],
+                    [
+                        'nama' => 'Kategori',
+                        'alamat' => 'blog/content/kategori',
+                    ],
+                ],
+            ],
         ];
     }
 
